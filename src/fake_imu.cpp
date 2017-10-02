@@ -22,7 +22,7 @@ namespace {
 constexpr double kFakeGravity = 9.8;
 constexpr int kSubscriberQueueSize = 150;
 constexpr char kImuInTopic[] = "imu_in";
-constexpr char kImuOutTopic[] = "imu_out";
+constexpr char kImuOutTopic[] = "imu";
 
 }  // namespace
 
