@@ -50,9 +50,10 @@ int main(int argc, char **argv){
   imu_out.linear_acceleration.z = kFakeGravity;
 
   while (ros::ok())  {
-        publisher.publish(imu_out);
-    	::ros::spinOnce();
-    	loop_rate.sleep();
+    imu_out.header.stamp = ros::Time::now();
+    publisher.publish(imu_out);
+    ::ros::spinOnce();
+    loop_rate.sleep();
   }
 
 
